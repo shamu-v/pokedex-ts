@@ -56,18 +56,8 @@ const PokemonData: React.FC<PokemonDataProps> = ({ data }) => {
                             <td className="border px-4 py-2">Habilidad {index + 1}</td>
                             <td className="border px-4 py-2">
                                 <p>Nombre: {ability.ability.name}</p>
-                                <p>URL: {ability.ability.url}</p>
                                 <p>Escondido: {ability.is_hidden ? 'Sí' : 'No'}</p>
                                 <p>Slot: {ability.slot}</p>
-                            </td>
-                        </tr>
-                    ))}
-                    {data.forms.map((form, index) => (
-                        <tr key={index}>
-                            <td className="border px-4 py-2">Forma {index + 1}</td>
-                            <td className="border px-4 py-2">
-                                <p>Nombre: {form.name}</p>
-                                <p>URL: {form.url}</p>
                             </td>
                         </tr>
                     ))}
@@ -76,7 +66,6 @@ const PokemonData: React.FC<PokemonDataProps> = ({ data }) => {
                             <td className="border px-4 py-2">Objeto sostenido {index + 1}</td>
                             <td className="border px-4 py-2">
                                 <p>Nombre del objeto: {item.item.name}</p>
-                                <p>URL del objeto: {item.item.url}</p>
                                 <p>Detalles de la versión:</p>
                             </td>
                         </tr>

@@ -10,7 +10,7 @@ export default async function Heading() {
     return (
         <Navbar>
             <NavbarBrand>
-                <Link href="/" className="font-bold text-inherit">POKEDEX</Link>
+                <Link href="/" className="font-bold text-inherit"><h1>POKEDEX</h1></Link>
             </NavbarBrand>
             <NavbarContent className="sm:flex gap-4" justify="end">
                 <NavbarItem>

@@ -37,7 +37,7 @@ export async function generateStaticParams() {
 }
 
 export async function getData(page : number) {
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=32&offset=${page <= 1 ? 0 : 16 * (page - 1)}`);
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=32&offset=${page <= 1 ? 0 : 32 * (page - 1)}`);
     const data = await res.json();
 
     const pokemons: Pokemon[] = await Promise.all(

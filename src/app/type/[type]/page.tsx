@@ -20,10 +20,10 @@ export default async function Page({ params }: { params: { type: string } }) {
   const pokemons = await getData(params.type);
 
     return (
-        <div className={`flex flex-col items-center justify-between py-4 px-8`}>
-            <h2 className="text-lg text-gray-800 font-bold sm:px-16 xl:px-48 dark:text-gray-400">{pokemons[0].type.toUpperCase()} POKEMONS</h2>
+        <div className={'flex flex-col items-center justify-between py-4 px-8'}>
+            <h2 className="text-lg text-gray-800 font-bold sm:px-16 xl:px-48 dark:text-gray-400">{params.type.toUpperCase()} POKEMONS</h2>
             <Divider className="my-4" />
-            <ListItems rule="type" items={pokemons} />
+            <ListItems rule="pokemon" items={pokemons} />
             <Divider className="my-4" />
             <HomeButton />
         </div>
